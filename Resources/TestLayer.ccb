@@ -14,6 +14,8 @@
 	<integer>4</integer>
 	<key>guides</key>
 	<array/>
+	<key>jsControlled</key>
+	<false/>
 	<key>nodeGraph</key>
 	<dict>
 		<key>baseClass</key>
@@ -1011,7 +1013,7 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>isTouchEnabled</string>
+				<string>touchEnabled</string>
 				<key>platform</key>
 				<string>iOS</string>
 				<key>type</key>
@@ -1021,7 +1023,7 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>isAccelerometerEnabled</string>
+				<string>accelerometerEnabled</string>
 				<key>platform</key>
 				<string>iOS</string>
 				<key>type</key>
@@ -1041,7 +1043,7 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>isKeyboardEnabled</string>
+				<string>keyboardEnabled</string>
 				<key>platform</key>
 				<string>Mac</string>
 				<key>type</key>
@@ -1089,6 +1091,13 @@
 		<dict>
 			<key>autoPlay</key>
 			<true/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>10</integer>
+			</dict>
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
@@ -1105,10 +1114,24 @@
 			<real>32</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>9</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>autoPlay</key>
 			<false/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>10</integer>
+			</dict>
 			<key>chainedSequenceId</key>
 			<integer>2</integer>
 			<key>length</key>
@@ -1125,10 +1148,24 @@
 			<real>32</real>
 			<key>sequenceId</key>
 			<integer>1</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>9</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>autoPlay</key>
 			<false/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>10</integer>
+			</dict>
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
@@ -1145,6 +1182,13 @@
 			<real>32</real>
 			<key>sequenceId</key>
 			<integer>2</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>9</integer>
+			</dict>
 		</dict>
 	</array>
 	<key>stageBorder</key>

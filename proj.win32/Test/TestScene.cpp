@@ -34,6 +34,7 @@ void TestScene::onEnter()
 	ll->registerCCNodeLoader( "TestLayer", TestLayerBuilderLoader::loader() );
 
 	ccbReader = new CCBReader( ll );
+	ccbReader->setCCBRootPath( "ccbResources/" );
 
 	CCNode* ccbLayer = ccbReader->readNodeGraphFromFile( "TestLayer.ccbi", this );
 
@@ -41,6 +42,8 @@ void TestScene::onEnter()
 
 	ccbAnimationManager = ccbReader->getAnimationManager();
 	ccbAnimationManager->retain();
+	
+	( ( TestLayer* )ccbLayer )->SetAnimationManager( ccbAnimationManager );
 
 	ccbReader->release();
 

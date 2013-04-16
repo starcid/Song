@@ -15,7 +15,26 @@ class TestLayer : public CCLayer, public CCBSelectorResolver
 
 	void buttonClicked( CCObject *pSender, CCControlEvent pCCControlEvent );
 public:
+	TestLayer()
+	{
+		ccbAnimationManager = NULL;
+	}
+
+	virtual ~TestLayer()
+	{
+		if( ccbAnimationManager != NULL )
+			ccbAnimationManager->release();
+	}
+
     CREATE_FUNC( TestLayer );
+
+	void SetAnimationManager( CCBAnimationManager* pManager )
+	{
+		ccbAnimationManager = pManager;
+		ccbAnimationManager->retain();
+	}
+private:
+	CCBAnimationManager* ccbAnimationManager;
 };
 
 class TestLayerBuilderLoader : public CCLayerLoader

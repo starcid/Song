@@ -27,4 +27,6 @@ SEL_CCControlHandler TestLayer::onResolveCCBCCControlSelector( CCObject *pTarget
 void TestLayer::buttonClicked( CCObject *pSender, CCControlEvent pCCControlEvent )
 {
 	CCLOG( "button clicked" );
+
+	ccbAnimationManager->runAnimations( "Left" );
 }
