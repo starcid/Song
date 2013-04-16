@@ -2,8 +2,10 @@
 #define __TEST_SCENE_H__
 
 #include "cocos2d.h"
+#include "../../extensions/cocos-ext.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 class TestScene : public CCScene
 {
@@ -18,7 +20,12 @@ public:
 
 	virtual void update( float delta );
 
-	static CCScene* create();
+	CREATE_FUNC( TestScene );
+
+private:
+	CCBReader* ccbReader;
+
+	CCBAnimationManager* ccbAnimationManager;
 };
 
 #endif	/*__TEST_SCENE_H__*/

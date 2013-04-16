@@ -80,6 +80,9 @@
     <ClInclude Include="Test\TestScene.h">
       <Filter>Test</Filter>
     </ClInclude>
+    <ClInclude Include="Test\TestLayer.h">
+      <Filter>Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -101,6 +104,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Test\TestScene.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestLayer.cpp">
       <Filter>Test</Filter>
     </ClCompile>
   </ItemGroup>

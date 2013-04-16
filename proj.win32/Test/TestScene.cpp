@@ -1,4 +1,5 @@
 #include "TestScene.h"
+#include "TestLayer.h"
 
 TestScene::TestScene()
 {
@@ -28,29 +29,30 @@ bool TestScene::init()
 void TestScene::onEnter()
 {
 	CCScene::onEnter();
+
+	CCNodeLoaderLibrary *ll = CCNodeLoaderLibrary::newDefaultCCNodeLoaderLibrary();
+	ll->registerCCNodeLoader( "TestLayer", TestLayerBuilderLoader::loader() );
+
+	ccbReader = new CCBReader( ll );
+
+	CCNode* ccbLayer = ccbReader->readNodeGraphFromFile( "TestLayer.ccbi", this );
+
+	this->addChild( ccbLayer );
+
+	ccbAnimationManager = ccbReader->getAnimationManager();
+	ccbAnimationManager->retain();
+
+	ccbReader->release();
+
 	this->scheduleUpdate();		
 }
 
 void TestScene::onExit()
 {
+	ccbAnimationManager->release();
 	CCScene::onExit();
 }
 
 void TestScene::update( float delta )
 {
-}
-
-CCScene *TestScene::create()
-{
-    CCScene *pRet = new TestScene();
-    if (pRet && pRet->init())
-    {
-        pRet->autorelease();
-        return pRet;
-    }
-    else
-    {
-        CC_SAFE_DELETE(pRet);
-        return NULL;
-    }
 }
